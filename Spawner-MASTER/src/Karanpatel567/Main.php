@@ -25,7 +25,6 @@ class Main extends PluginBase implements Listener{
   public $cfg;
   public $eco;
   public function onEnable() {
-    
     if(!is_dir($this->getDataFolder())) {
       mkdir($this->getDataFolder());
       }
@@ -44,7 +43,7 @@ class Main extends PluginBase implements Listener{
     ]);
     
     $this->eco = EconomyAPI::getInstance();
-    $this->getServer()->getPluginManager()->registerEvents($this,$this);
+    $this->getServer()->getPluginManager()->registerEvents($this, $this);
     
     }
     
